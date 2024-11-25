@@ -183,7 +183,7 @@ body {
 .home-img .glowing-circle {
     width: 100%;
     height: 100%;
-   
+
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -203,7 +203,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(black, rgba(219, 105, 11, 0.411));
+    background: linear-gradient(black, rgba(231, 115, 20, 0.849));
     border-radius: 50%;
     animation: circleRotate 5s linear infinite;
 }
