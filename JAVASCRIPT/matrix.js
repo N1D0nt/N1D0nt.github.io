@@ -24,11 +24,11 @@ for (let i = 0; i < columns; i++) {
 // Update the matrix animation
 function updateMatrix() {
   // Set the background color
-  ctx.fillStyle = "rgba(34, 114, 255, 1)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
   ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
   // Set the text color and font
-  ctx.fillStyle = "blue";
+  ctx.fillStyle = "rgba(34, 114, 255, 1)";
   ctx.font = "12px timesnewroman";
 
   // Loop through each column
