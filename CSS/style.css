@@ -167,7 +167,7 @@ body {
 .home-content {
     max-width: 800px;
     padding: 50px;
-    /* margin-left: -30px; */
+    margin-left: -30px; 
 }
 
 .home-content h1 {
@@ -253,7 +253,7 @@ body {
     0 0 25px #2272FF, 0 0 50px #2272FF,
     0 0 100px #2272FF, 0 0 200px #2272FF;
 }
-
+/* Logo ascii art */
 .logo-ascii {
     color: white;
     background: transparent;
@@ -265,29 +265,108 @@ body {
     font-size: 13px;
     border: 1px solid transparent;
 
+
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2.1s, 3.1s;
 }
 
-.image img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    max-width: 350px;
-    object-fit: cover;
-}
+@media(max-width: 800px){
 
-canvas {
-    position: fixed;
-    top: auto;
-    left: auto;
-    background-color: black;
-    z-index: -1;
-    background-size:cover;
-    background-blend-mode: multiply;
-    background-size: auto;
-    scroll-behavior: smooth;
+    body{
+        grid-template-columns: 1fr;
+    }
+
+    main{
+        padding: 2em 1em 60px 1em;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-ascii{
+        margin-top: 20px;
+        order: 1;
+    }
+
+    .home-content {
+        order: 0;
+    }
+
+    .container{
+        border: none;
+        padding: 0;
+    }
+
+    #sidebar{
+        height: 60px;
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid var(--line-clr);
+        padding: 0;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        
+        z-index: 1000;
+
+
+        > ul{
+            padding: 0;
+            display: grid;
+            grid-auto-columns: auto;
+            grid-auto-flow: column;
+            align-items: center;
+            overflow-x: scroll;
+        }
+
+        ul li {
+            height: 100%;
+        }
+
+        ul a, ul .dropdown-btn{
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border-radius: 0;
+            justify-content: center;
+        }
+        
+        ul li span, ul li:first-child, .dropdown-btn i:last-child{
+            display: none;
+        }
+
+        ul li .sub-menu.show{
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            box-sizing: border-box;
+            height: 60px;
+            width: 100%;
+            background-color: var(--line-clr);
+            display: flex;
+            justify-content: center;
+
+            > div {
+                overflow-x: auto;
+            }
+            a {
+                box-sizing: border-box;
+                padding: 1em;
+                width: auto;
+                justify-content: center;
+            }
+            li {
+                display: inline-flex;
+            }
+        }
+    }
+
+    #sidebar i {
+        font-size: 27px;
+    }
+    
 }
 
 

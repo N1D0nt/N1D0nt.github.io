@@ -7,6 +7,8 @@
     <meta name="descripcion" content="Proyectos de ciberseguridad, "> 
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#8FD694">
+    <!-- Icono -->
+    <link rel="icon" type="image/png" href="/IMAGES/logo-sin-nombre.png">
 
     <!-- OPEN GRAPH -->
     <meta property="og:tittle" content="N1D0 | Portafolio ciberseguridad">
@@ -15,7 +17,6 @@
     <meta property="og:image:alt" content="Una fotografia de un par de mujeres explicando como hacer una pagina web"/>
     <link rel="alternate" href="https://N1D0.com.ar/es" hreflang="en"> <!-- SEO para encontrar la misma pagina pero con otra traduccion -->
     <link rel="canonical" href="https://N1D0.com.ar"> <!-- www.webcity.com.ar o webcity.com.ar -->
-    <link rel="icon" type="image/png" href="/IMAGES/logoconfondo.png">
     
     <!-- CSS links -->
     <link rel="stylesheet" href="CSS/style.css">
@@ -50,23 +51,34 @@
                 </a>
             </li>
             <li>
+                <a href="#">
+                    <i class="bx bx-book-content"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li>
                 <button onclick=toggleSubMenu(this) class="dropdown-btn">
                     <i class="bx bx-task"></i>
-                    <span>Relevant</span>
+                    <span>Projects</span>
                     <i class="bx bx-down-arrow"></i>
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">News</a></li>
+                        <li><a href="#">Off-Mana</a></li>
                     </div>
                 </ul>
             </li>
             <li>
-                <a href="#">
-                    <i class="bx bx-book"></i>
-                    <span>Skills</span>
-                </a>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <i class="bx bx-news"></i>
+                    <span>Blog</span>
+                    <i class="bx bx-down-arrow"></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="#">New 1</a></li>
+                    </div>
+                </ul>
             </li>
         </ul>
     </nav>
@@ -79,7 +91,7 @@
                 <h3 class="mu">Soy</h3>
                 <h1>N1D0</h1>
                 <h3>un <span class="pro-text">
-                    <script>
+                    <script class="words-changes">
                        var typed = new Typed(".pro-text", {
                           strings: [
                             "Hacker ético",
