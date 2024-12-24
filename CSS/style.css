@@ -7,6 +7,7 @@
     --line-clr: #191919;
     --accent-clr: white;
     --hover-clr: #BDBDBD11;
+    --hover-link-clr: #d6cdcd;
 }
 
 * {
@@ -17,6 +18,7 @@
 
 html {
     font-family: Hack,'Poppins',sans-serif;
+    font-size: 16px;
     line-height: 1.5rem;
 }
 
@@ -157,55 +159,52 @@ body {
 
 .home {
     width: 100%;
+    position: relative;
     min-height: 80vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10% 0;
+
 }
 
 .home-content {
     max-width: 800px;
-    padding: 50px;
-    margin-left: -30px; 
+    padding: 30px;
+    margin-left: -30px;
 }
 
 .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
+    font-size: 62px;
+    font-weight: 700px;
     line-height: 1.2;
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: .7s;
 }   
 
+/* Pantalla inicial */
 .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: clamp(20px, 4vw, 32px);
+
+    white-space: nowrap;
+    font-weight: 700px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
 
-.mu {
-    margin-top: 50px;
+.pro-text {
+    white-space: nowrap; /* Asegura que el texto animado no se envuelva */
+    display: inline-block; /* Mantiene la animación en línea */
 }
 
-.home-content h1, h3 {
-    text-shadow: 5px 4px 10px #2272FF;
+.home-content h1, h3{
+    text-shadow: 5px 4px 10px var(--main-text-clr);
 }
 
 .home-content h3 span {
-    color: #2272FF;
-}
-
-.home-content p {
-    font-size: 16px;
-    margin: 20px 0 0;
-    text-align: left;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1.3s;
+    color: var(--secondary-text-clr);
 }
 
 .home-sci a {
@@ -215,10 +214,10 @@ body {
     width: 40px;
     height: 40px;
     background: black;
-    border: 2px solid #2272FF;
+    border: 2px solid var(--main-text-clr);
     border-radius: 50%;
     font-size: 20px;
-    color: #2272FF;
+    color: var(--main-text-clr);
     text-decoration: none;
     margin: 30px 15px 30px 0;
     opacity: 0;
@@ -228,18 +227,18 @@ body {
 }
 
 .home-sci a:hover {
-    background: #2272FF;
+    background: var(--main-text-clr);
     color: black;
-    box-shadow: 0 0 20px #2272FF;
+    box-shadow: 0 0 20px var(--main-text-clr);
 }
 
 .btn-box {
     display: inline-block;
     padding: 12px 28px;
-    background: #2272FF;
+    background: var(--main-text-clr);
     border-radius: 40px;
     font-size: 16px;
-    color: black;
+    color: var(--base-clr);
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -249,28 +248,59 @@ body {
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 5px #2272FF,
-    0 0 25px #2272FF, 0 0 50px #2272FF,
-    0 0 100px #2272FF, 0 0 200px #2272FF;
+    box-shadow: 0 0 5px var(--main-text-clr),
+    0 0 25px var(--main-text-clr), 0 0 50px var(--main-text-clr),
+    0 0 100px var(--main-text-clr), 0 0 200px var(--main-text-clr);
 }
+
 /* Logo ascii art */
 .logo-ascii {
+    display: block;
     color: white;
-    background: transparent;
     display: inline-block;
     white-space: pre;
-    letter-spacing: 0;
     line-height: 1.4;
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 13px;
+    font-size: 12px;
     border: 1px solid transparent;
+    position: absolute;
+    margin-top: 0;
+    transform: translate(-50%, -50%); /* Ajusta el punto de referencia para centrar */
+    top: 5%; /* Ajusta la distancia desde la parte superior */
+    left: 58%; /* Centra el logo horizontalmente */
 
-
-    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-    animation-delay: 2.1s, 3.1s;
+    animation: zoomIn 5s ease forwards, floatImage 4s ease-in-out infinite;
 }
 
-@media(max-width: 800px){
+/* About */
+
+.container {
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    margin-bottom: 20px;
+    padding: min(3em, 15%);
+    margin: 3%;
+
+    br {
+        padding: 1em;
+    }
+
+    h2, p {
+        margin-top: 0.5em;
+    }
+}
+
+.links-inf{
+    color: var(--main-text-clr);
+    text-decoration: none;
+}
+
+.links-inf:hover{
+    color: var(--hover-link-clr);
+}
+
+/* Resposive desing */
+@media(max-width: 1024px){
 
     body{
         grid-template-columns: 1fr;
@@ -283,20 +313,20 @@ body {
     .home {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .logo-ascii{
         margin-top: 20px;
+        width: auto;
         order: 1;
+        position: sticky;
     }
 
     .home-content {
         order: 0;
-    }
-
-    .container{
-        border: none;
-        padding: 0;
+        width: 120%;
+        top: unset;
     }
 
     #sidebar{
