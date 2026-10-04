@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>N1D0 | Portafolio de ciberseguridad</title>
+    <meta name="description" content="Proyectos, notas e información de ciberseguridad por N1D0.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#03060d">
+
+    <link rel="icon" type="image/png" href="IMAGES/logo-sin-nombre.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="N1D0 | Portafolio de ciberseguridad">
+    <meta property="og:description" content="Proyectos, notas e información de ciberseguridad por N1D0.">
+    <meta property="og:image" content="https://n1dont.github.io/IMAGES/seo-port-image.jpg">
+    <meta property="og:image:alt" content="Codigo con un chiste sobre la vida de un estudiante de programacion">
+    <link rel="canonical" href="https://N1D0.com.ar/index.html">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JAVASCRIPT/script.js" defer></script>
+</head>
+<body>
+    <canvas id="rain" aria-hidden="true"></canvas>
+    <div id="glow" aria-hidden="true"></div>
+    <header class="topbar">
+        <span class="lights" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="prompt"><b>n1d0</b>@portfolio:<i>~/</i>$</span>
+        <span id="clock" aria-hidden="true">--:--:--</span>
+    </header>
+
+    <nav id="sidebar" aria-label="Navegacion principal">
+        <div class="nav-title">$ tree ~</div>
+        <ul>
+            <li><a href="index.html" aria-current="page"><span class="idx">00</span>home</a></li>
+            <li><a href="about.html"><span class="idx">01</span>whoami</a></li>
+            <li><a href="skills.html"><span class="idx">02</span>skills</a></li>
+            <li><a href="projects/off-mana.html"><span class="idx">03</span>projects</a>
+                <ul><li><a href="projects/off-mana.html">off-mana</a></li></ul></li>
+            <li><a href="blog/new-1.html"><span class="idx">04</span>blog</a>
+                <ul><li><a href="blog/new-1.html">new-1</a></li></ul></li>
+        </ul>
+        <div class="nav-foot">uptime: aprendiendo<br>shell: bash</div>
+    </nav>
+
+    <main>
+        <div class="boot" aria-hidden="true">
+            <div><span class="ok">ok</span><span class="msg">cargando perfil n1d0</span></div>
+            <div><span class="ok">ok</span><span class="msg">montando ~/skills ~/projects ~/blog</span></div>
+            <div><span class="ok">ok</span><span class="msg">foco: security assessment &amp; testing</span></div>
+            <div><span class="wn">warn</span><span class="msg">cv.pdf no encontrado</span></div>
+            <div><span class="ok">ok</span><span class="msg">sesion lista</span></div>
+        </div>
+
+        <section class="hero">
+            <div>
+                <h1 data-text="N1D0">N1D0</h1>
+                <p class="role"><span id="typed" data-roles='["Analista en ciberseguridad","Programador","Developer"]'>Analista en ciberseguridad</span><span class="cursor" aria-hidden="true"></span></p>
+                <p>Estudiante de Ciencias de la Computación en la UNR. Apasionado por la ciberseguridad y curioso por la tecnología.</p>
+                <div class="actions">
+                    <a class="btn" href="about.html">whoami</a>
+                    <a class="btn" href="skills.html">skills</a>
+                    <span class="btn disabled" title="CV todavia no disponible">cv.pdf</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="box term reveal" id="term" hidden>
+            <span class="box-title">terminal</span>
+            <div class="term-out" id="term-out" aria-live="polite"></div>
+            <label class="term-in"><span class="ps">n1d0@portfolio:~$</span><input id="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="Comando"></label>
+            <div class="term-hint">probá: <button type="button" data-cmd="help">help</button> <button type="button" data-cmd="whoami">whoami</button> <button type="button" data-cmd="ls">ls</button> <button type="button" data-cmd="contact">contact</button></div>
+        </section>
+
+        <p class="cmd reveal">ls -l ~</p>
+        <ul class="ls reveal">
+            <li><span class="perm">drwxr-xr-x</span><span><a href="about.html">whoami/</a><span class="desc">quién soy, qué estudio y hacia dónde apunto</span></span></li>
+            <li><span class="perm">drwxr-xr-x</span><span><a href="skills.html">skills/</a><span class="desc">herramientas y áreas en las que me muevo</span></span></li>
+            <li><span class="perm">drwxr-xr-x</span><span><a href="projects/off-mana.html">projects/</a><span class="desc">proyectos de ciberseguridad y desarrollo</span></span></li>
+            <li><span class="perm">drwxr-xr-x</span><span><a href="blog/new-1.html">blog/</a><span class="desc">notas, writeups y noticias de ciberseguridad</span></span></li>
+        </ul>
+
+        <p class="cmd reveal">cat contact.txt</p>
+        <ul class="contact reveal">
+            <li><span class="k">github</span><a href="https://github.com/N1D0nt" target="_blank" rel="noopener">github.com/N1D0nt</a></li>
+            <li><span class="k">linkedin</span><a href="https://www.linkedin.com/in/n1d0" target="_blank" rel="noopener">linkedin.com/in/n1d0</a></li>
+            <li><span class="k">mail</span><a href="mailto:n1do28.sh@gmail.com">n1do28.sh@gmail.com</a></li>
+            <li><span class="k">instagram</span><a href="https://www.instagram.com/nicomanci.bash/" target="_blank" rel="noopener">@nicomanci.bash</a></li>
+        </ul>
+    </main>
+</body>
+</html>
