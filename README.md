@@ -12,5 +12,3 @@ blog/               entradas
 CSS/style.css       estilos y tema (variables en :root)
 JAVASCRIPT/script.js  reloj y efecto de tipeo
 ```
-
-Para probarlo en local: `python -m http.server` y abrir http://localhost:8000
